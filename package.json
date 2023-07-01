@@ -1,0 +1,23 @@
+{
+  "name": "belajar-typescript-dasar",
+  "version": "1.0.0",
+  "description": "Belajar TypeScript Dasar",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "author": "Eko Kurniawan Khannedy",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.5",
+    "@types/jest": "^29.5.2",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0"
+  }
+}
