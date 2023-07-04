@@ -48,4 +48,21 @@ describe('Function', function () {
         expect(sayHello("Eko")).toBe("Hello Eko");
         expect(sayHello("Eko", "Kurniawan")).toBe("Hello Eko Kurniawan");
     });
+
+    it('should support function overloading', function () {
+
+        function callMe(value: number): number;
+        function callMe(value: string): string;
+        function callMe(value: any): any{
+            if(typeof value === "string"){
+                return value.toUpperCase();
+            }else if(typeof value === "number"){
+                return value * 10;
+            }
+        }
+
+        expect(callMe(10)).toBe(100);
+        expect(callMe("Eko")).toBe("EKO");
+
+    });
 });
