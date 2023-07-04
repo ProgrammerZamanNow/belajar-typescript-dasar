@@ -94,4 +94,25 @@ describe('Interface', function () {
 
         console.info(person.sayHello("Budi"));
     });
+
+    it('should support intersection types', function () {
+
+        interface HasName {
+            name: string
+        }
+
+        interface HasId {
+            id: string
+        }
+
+        type Domain = HasId & HasName;
+
+        const domain: Domain = {
+            id: "1",
+            name: "Eko"
+        };
+
+        console.info(domain);
+
+    });
 });
